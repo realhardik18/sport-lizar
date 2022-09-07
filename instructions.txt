@@ -1,0 +1,17 @@
+here is what to do for this project:
+
+STAGE 1
+first make a website with taildwind css telling about the project in breif and why someoene should use it
+second add support for only one support for now cricket, and webhook system do whatever you want to implement this
+thrid advertise throughout cricket servers, in webhook add details how one can add it fro their own service
+fourth add easy to set up steps and use heroku for hosting
+
+STAGE 2
+now after we start getting traction, maybe 100 valid webhooks start working on ad system
+intially between each over tell users they can add their ads 
+sharge them 10$ per month to post ads and communites can get preium ad free by paying 5$ per month
+
+STAGE3
+repeat for other sports
+
+
