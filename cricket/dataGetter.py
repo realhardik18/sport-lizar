@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import time
 #from classes import class_score, class_commentary, class_overs, class_for_toss
+from matchinfo import match_url
 
 
 def get_commentary(url, class_for_commentary_cards):
@@ -37,4 +38,12 @@ def get_toss_result(url, class_for_toss):
     return entry.text
 
 
+def get_score_from_title_of_site(url):
+    pageResponse = requests.get(url)
+    soup = BeautifulSoup(pageResponse.text, 'html.parser')
+    for title in soup.find_all('title'):
+        return title.get_text().split(' ')[1]
+
+
 #print(get_toss_result(match_url, class_for_toss))
+# print(get_score_from_title_of_site(match_url))
