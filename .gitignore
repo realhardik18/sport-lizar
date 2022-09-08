@@ -1,3 +1,6 @@
 /__pycache__
 webhooks.json
 creds.py
+classes.py
+matchinfo.py
+instructions.txt
