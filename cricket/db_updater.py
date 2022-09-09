@@ -24,5 +24,4 @@ def update_pantry(item):
     requests.request("POST", url, headers=headers, data=payload)
 
 
-# print(update_pantry('yo00'))
 # print(get_pantry())

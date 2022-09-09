@@ -10,7 +10,7 @@ def get_commentary(url, class_for_commentary_cards):
     soup = BeautifulSoup(pageResponse, "html.parser")
     entry = soup.find(
         class_=class_for_commentary_cards)
-    return entry.text.strip('\n')[5:]
+    return entry.text.strip('\n')[4:]
 
 
 def get_score(url, class_for_score):
