@@ -20,3 +20,12 @@ def send_webhook(webhooks):
         text=f'{get_toss_result(url=match_url, class_for_toss=class_for_toss)} || Last updated at {datetime.utcnow().strftime("%H:%M:%S")} GMT')
     webhook.add_embed(embed=embed)
     webhook.execute()
+
+
+def send_test_webhook(url):
+    webhook = DiscordWebhook(url=url)
+
+    embed = DiscordEmbed(
+        title=f'hello there', description=f'this is a test message to ensure everything is working [ᵖᵒʷᵉʳᵉᵈ ᵇʸ ˢᵖᵒʳᵗ ˡᶦᶻᵃʳ](https://twitter.com/sportlizarHQ)', color='03b2f8')
+    webhook.add_embed(embed=embed)
+    webhook.execute()
