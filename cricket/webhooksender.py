@@ -8,8 +8,8 @@ from datetime import datetime
 def send_webhook(webhooks):
     webhook = DiscordWebhook(url=webhooks)
 
-    embed = DiscordEmbed(title=title,
-                         description=f'LIVE at {location}', color='03b2f8')
+    embed = DiscordEmbed(title=f'{title}',
+                         description=f'LIVE at {location} [ᵖᵒʷᵉʳᵉᵈ ᵇʸ ˢᵖᵒʳᵗ ˡᶦᶻᵃʳ](https://twitter.com/sportlizarHQ)', color='03b2f8')
     overs = get_overs(url=match_url, class_for_overs=class_overs)
     #embed.add_embed_field(name='Score', value=f'{get_score(url=match_url,class_for_score=class_score)} at {get_overs(url=match_url,class_for_overs=class_overs)}')
     embed.add_embed_field(
@@ -17,6 +17,6 @@ def send_webhook(webhooks):
     embed.add_embed_field(name='Ball by ball commentary', value=get_commentary(
         url=match_url, class_for_commentary_cards=class_commentary))
     embed.set_footer(
-        text=f'{get_toss_result(url=match_url, class_for_toss=class_for_toss)} || Last updated at {datetime.now().strftime("%H:%M:%S")}')
+        text=f'{get_toss_result(url=match_url, class_for_toss=class_for_toss)} || Last updated at {datetime.utcnow().strftime("%H:%M:%S")} GMT')
     webhook.add_embed(embed=embed)
     webhook.execute()
